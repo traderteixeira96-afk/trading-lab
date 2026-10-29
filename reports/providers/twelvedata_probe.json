@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-29T21:17:01.521135+00:00",
+  "generated_at_utc": "2026-10-29T21:19:36.901873+00:00",
   "provider": "Twelve Data",
   "purpose": "coverage_probe_only",
   "interval": "15min",
@@ -9,25 +9,37 @@
       "status": "available",
       "returned_bars": 5,
       "latest_bar_time": "2026-10-30 08:15:00",
-      "timezone": null
+      "timezone": null,
+      "meta_timezone": null,
+      "meta_symbol": "EUR/USD",
+      "latest_bar_is_after_probe_utc_if_naive_utc": true
     },
     "GBP/USD": {
       "status": "available",
       "returned_bars": 5,
       "latest_bar_time": "2026-10-30 08:15:00",
-      "timezone": null
+      "timezone": null,
+      "meta_timezone": null,
+      "meta_symbol": "GBP/USD",
+      "latest_bar_is_after_probe_utc_if_naive_utc": true
     },
     "USD/JPY": {
       "status": "available",
       "returned_bars": 5,
       "latest_bar_time": "2026-10-30 08:15:00",
-      "timezone": null
+      "timezone": null,
+      "meta_timezone": null,
+      "meta_symbol": "USD/JPY",
+      "latest_bar_is_after_probe_utc_if_naive_utc": true
     },
     "XAU/USD": {
       "status": "available",
       "returned_bars": 5,
       "latest_bar_time": "2026-10-30 08:15:00",
-      "timezone": null
+      "timezone": null,
+      "meta_timezone": null,
+      "meta_symbol": "XAU/USD",
+      "latest_bar_is_after_probe_utc_if_naive_utc": true
     },
     "XAG/USD": {
       "status": "http_error",
