@@ -14,21 +14,30 @@ BASE = "https://api.mexc.com/api/v3/klines"
 SYMBOLS = ("BTCUSDT", "ETHUSDT", "SOLUSDT")
 INTERVALS = ("15m", "1h", "4h")
 INTERVAL_MS = {"15m": 900000, "1h": 3600000, "4h": 14400000}
+# A API spot MEXC utiliza 60m, não 1h, para candles de uma hora.
+API_INTERVAL = {"15m": "15m", "1h": "60m", "4h": "4h"}
 LIMIT = 120
 
 
 def fetch(symbol, interval, now_ms):
     # Solicita mais candles para poder descartar com segurança o candle aberto.
     query = urllib.parse.urlencode({
-        "symbol": symbol, "interval": interval, "limit": LIMIT + 2
+        "symbol": symbol, "interval": API_INTERVAL[interval], "limit": LIMIT + 2
     })
     req = urllib.request.Request(
         BASE + "?" + query,
         headers={"User-Agent": "TradingLab-PublicMarketData/1.0",
                  "Accept": "application/json"},
     )
-    with urllib.request.urlopen(req, timeout=25) as response:
-        raw = json.load(response)
+    try:
+        with urllib.request.urlopen(req, timeout=25) as response:
+            raw = json.load(response)
+    except urllib.error.HTTPError as exc:
+        details = exc.read(1500).decode("utf-8", errors="replace")
+        raise ValueError(
+            f"MEXC {symbol}/{interval} (API {API_INTERVAL[interval]}): "
+            f"HTTP {exc.code}; resposta={details}"
+        ) from exc
     if not isinstance(raw, list):
         raise ValueError(f"Resposta inesperada para {symbol}/{interval}: {str(raw)[:250]}")
     candles = []
