@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "MEXC Spot Public API",
   "market": "spot",
-  "generated_at_utc": "2026-10-29T10:36:59.326000+00:00",
+  "generated_at_utc": "2026-10-29T10:38:56.904000+00:00",
   "closed_candles_only": true,
   "candles": {
     "BTCUSDT": {

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-29T10:38:58.694477+00:00",
+  "source_generated_at_utc": "2026-10-29T10:38:56.904000+00:00",
+  "source_path": "data/crypto/latest.json",
+  "market": "spot",
+  "provider": "MEXC Spot Public API",
+  "method": "EMA20/EMA50 + ATR14 + extremos das 20 velas anteriores",
+  "execution_enabled": false,
+  "disclaimer": "Análise descritiva, não é recomendação ou sinal de negociação.",
+  "assets": {
+    "BTCUSDT": {
+      "multitimeframe_bias": "mixed_or_neutral",
+      "timeframes": {
+        "15m": {
+          "bias": "neutral",
+          "fresh": true,
+          "last_close": 80133.56,
+          "ema20": 80123.19771968,
+          "ema50": 80326.04163485,
+          "atr14": 132.95071429,
+          "atr_pct": 0.1659,
+          "support_20": 79837.94,
+          "resistance_20": 80525.0,
+          "last_candle_close_utc": "2026-10-29T10:30:00+00:00",
+          "candles_used": 120
+        },
+        "1h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 80205.55,
+          "ema20": 80469.63924318,
+          "ema50": 80583.52153737,
+          "atr14": 397.14428571,
+          "atr_pct": 0.4952,
+          "support_20": 79725.33,
+          "resistance_20": 81779.26,
+          "last_candle_close_utc": "2026-10-29T10:00:00+00:00",
+          "candles_used": 120
+        },
+        "4h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 79869.46,
+          "ema20": 80641.5351319,
+          "ema50": 81017.57804657,
+          "atr14": 753.66785714,
+          "atr_pct": 0.9436,
+          "support_20": 79390.06,
+          "resistance_20": 81805.94,
+          "last_candle_close_utc": "2026-10-29T08:00:00+00:00",
+          "candles_used": 120
+        }
+      }
+    },
+    "ETHUSDT": {
+      "multitimeframe_bias": "bearish",
+      "timeframes": {
+        "15m": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 2318.06,
+          "ema20": 2318.44693799,
+          "ema50": 2325.66077327,
+          "atr14": 6.34285714,
+          "atr_pct": 0.2736,
+          "support_20": 2305.6,
+          "resistance_20": 2334.0,
+          "last_candle_close_utc": "2026-10-29T10:30:00+00:00",
+          "candles_used": 120
+        },
+        "1h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 2321.63,
+          "ema20": 2331.7017667,
+          "ema50": 2337.52835528,
+          "atr14": 17.15428571,
+          "atr_pct": 0.7389,
+          "support_20": 2294.12,
+          "resistance_20": 2390.99,
+          "last_candle_close_utc": "2026-10-29T10:00:00+00:00",
+          "candles_used": 120
+        },
+        "4h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 2310.34,
+          "ema20": 2341.88512794,
+          "ema50": 2364.91755885,
+          "atr14": 31.92285714,
+          "atr_pct": 1.3817,
+          "support_20": 2293.53,
+          "resistance_20": 2390.99,
+          "last_candle_close_utc": "2026-10-29T08:00:00+00:00",
+          "candles_used": 120
+        }
+      }
+    },
+    "SOLUSDT": {
+      "multitimeframe_bias": "bearish",
+      "timeframes": {
+        "15m": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 100.08,
+          "ema20": 100.17218482,
+          "ema50": 100.56878212,
+          "atr14": 0.245,
+          "atr_pct": 0.2448,
+          "support_20": 99.72,
+          "resistance_20": 100.83,
+          "last_candle_close_utc": "2026-10-29T10:30:00+00:00",
+          "candles_used": 120
+        },
+        "1h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 100.32,
+          "ema20": 100.87610877,
+          "ema50": 101.16891125,
+          "atr14": 0.79928571,
+          "atr_pct": 0.7967,
+          "support_20": 99.29,
+          "resistance_20": 103.8,
+          "last_candle_close_utc": "2026-10-29T10:00:00+00:00",
+          "candles_used": 120
+        },
+        "4h": {
+          "bias": "bearish",
+          "fresh": true,
+          "last_close": 99.78,
+          "ema20": 101.40293298,
+          "ema50": 102.43815412,
+          "atr14": 1.46857143,
+          "atr_pct": 1.4718,
+          "support_20": 99.2,
+          "resistance_20": 103.8,
+          "last_candle_close_utc": "2026-10-29T08:00:00+00:00",
+          "candles_used": 120
+        }
+      }
+    }
+  }
+}
