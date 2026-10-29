@@ -18,7 +18,7 @@ def main():
         raise SystemExit("Segredo TWELVE_DATA_API_KEY ausente")
     results = {}
     for symbol in SYMBOLS:
-        params = urllib.parse.urlencode({"symbol": symbol, "interval": "15min", "outputsize": 5, "apikey": key})
+        params = urllib.parse.urlencode({"symbol": symbol, "interval": "15min", "outputsize": 5, "timezone": "UTC", "apikey": key})
         req = urllib.request.Request(URL + "?" + params, headers={"User-Agent": "TradingLab-coverage-probe/1.0"})
         try:
             with urllib.request.urlopen(req, timeout=20) as response:
@@ -38,6 +38,7 @@ def main():
         "provider": "Twelve Data",
         "purpose": "coverage_probe_only",
         "interval": "15min",
+        "requested_timezone": "UTC",
         "note": "Disponibilidade pontual, sem validação de integridade, horário de fechamento ou direito de uso em produção.",
         "results": results,
     }
