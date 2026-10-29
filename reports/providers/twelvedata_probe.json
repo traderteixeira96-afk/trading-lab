@@ -1,45 +1,46 @@
 {
-  "generated_at_utc": "2026-10-29T21:19:36.901873+00:00",
+  "generated_at_utc": "2026-10-29T21:33:01.394461+00:00",
   "provider": "Twelve Data",
   "purpose": "coverage_probe_only",
   "interval": "15min",
+  "requested_timezone": "UTC",
   "note": "Disponibilidade pontual, sem validação de integridade, horário de fechamento ou direito de uso em produção.",
   "results": {
     "EUR/USD": {
       "status": "available",
       "returned_bars": 5,
-      "latest_bar_time": "2026-10-30 08:15:00",
+      "latest_bar_time": "2026-10-29 21:30:00",
       "timezone": null,
       "meta_timezone": null,
       "meta_symbol": "EUR/USD",
-      "latest_bar_is_after_probe_utc_if_naive_utc": true
+      "latest_bar_is_after_probe_utc_if_naive_utc": false
     },
     "GBP/USD": {
       "status": "available",
       "returned_bars": 5,
-      "latest_bar_time": "2026-10-30 08:15:00",
+      "latest_bar_time": "2026-10-29 21:30:00",
       "timezone": null,
       "meta_timezone": null,
       "meta_symbol": "GBP/USD",
-      "latest_bar_is_after_probe_utc_if_naive_utc": true
+      "latest_bar_is_after_probe_utc_if_naive_utc": false
     },
     "USD/JPY": {
       "status": "available",
       "returned_bars": 5,
-      "latest_bar_time": "2026-10-30 08:15:00",
+      "latest_bar_time": "2026-10-29 21:30:00",
       "timezone": null,
       "meta_timezone": null,
       "meta_symbol": "USD/JPY",
-      "latest_bar_is_after_probe_utc_if_naive_utc": true
+      "latest_bar_is_after_probe_utc_if_naive_utc": false
     },
     "XAU/USD": {
       "status": "available",
       "returned_bars": 5,
-      "latest_bar_time": "2026-10-30 08:15:00",
+      "latest_bar_time": "2026-10-29 21:30:00",
       "timezone": null,
       "meta_timezone": null,
       "meta_symbol": "XAU/USD",
-      "latest_bar_is_after_probe_utc_if_naive_utc": true
+      "latest_bar_is_after_probe_utc_if_naive_utc": false
     },
     "XAG/USD": {
       "status": "http_error",
