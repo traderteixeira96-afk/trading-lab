@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TradingLab Market Bias Report",
+  "type": "object",
+  "required": [
+    "generated_at_utc",
+    "timezone",
+    "markets",
+    "execution_enabled"
+  ],
+  "properties": {
+    "generated_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timezone": {
+      "const": "America/Sao_Paulo"
+    },
+    "execution_enabled": {
+      "const": false
+    },
+    "markets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "symbol",
+          "bias",
+          "confidence",
+          "source",
+          "source_timestamp_utc",
+          "rationale"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "bias": {
+            "enum": [
+              "bullish",
+              "bearish",
+              "neutral",
+              "unavailable"
+            ]
+          },
+          "confidence": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 1
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_timestamp_utc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
