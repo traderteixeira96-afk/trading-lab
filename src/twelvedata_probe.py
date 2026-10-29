@@ -25,7 +25,7 @@ def main():
                 payload = json.load(response)
             values = payload.get("values")
             if isinstance(values, list) and values:
-                results[symbol] = {"status": "available", "returned_bars": len(values), "latest_bar_time": values[0].get("datetime"), "timezone": payload.get("meta", {}).get("exchange_timezone")}
+                results[symbol] = {"status": "available", "returned_bars": len(values), "latest_bar_time": values[0].get("datetime"), "timezone": payload.get("meta", {}).get("exchange_timezone"), "meta_timezone": payload.get("meta", {}).get("timezone"), "meta_symbol": payload.get("meta", {}).get("symbol"), "latest_bar_is_after_probe_utc_if_naive_utc": values[0].get("datetime", "") > dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S")}
             else:
                 results[symbol] = {"status": "unavailable", "provider_code": payload.get("code"), "reason": "API não retornou candles"}
         except urllib.error.HTTPError as exc:
