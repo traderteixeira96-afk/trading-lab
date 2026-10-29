@@ -17,3 +17,6 @@ O workflow `.github/workflows/crypto-snapshot.yml` é executado às 06:50, 12:50
 
 ## Transparência
 `data/crypto/latest.json` representa dados de **spot MEXC**, não futuros. Não presume integração automática com tarefas do ChatGPT. Cada relatório deve informar fontes, horários e indisponibilidades.
+
+## Relatório técnico automático
+Após cada snapshot, `src/crypto_analysis.py` gera `reports/crypto/latest.json` com EMA20/EMA50, ATR14, suportes/resistências históricos e viés por período. O viés multitemporal só é direcional quando M15, H1 e H4 concordam; caso contrário é `mixed_or_neutral`. Dados antigos são marcados `unavailable`. Esta análise é descritiva, não produz entradas, stops ou ordens. O arquivo não alimenta automaticamente a tarefa agendada do ChatGPT.
