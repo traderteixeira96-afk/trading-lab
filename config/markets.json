@@ -1,0 +1,52 @@
+{
+  "project": "TradingLab",
+  "timezone": "America/Sao_Paulo",
+  "report_hours_local": [
+    "07:00",
+    "13:00",
+    "19:00"
+  ],
+  "crypto": {
+    "provider": "MEXC Spot Public API",
+    "endpoint": "https://api.mexc.com/api/v3/klines",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ],
+    "intervals": [
+      "15m",
+      "1h",
+      "4h"
+    ],
+    "limit": 120,
+    "closed_candles_only": true
+  },
+  "other_markets": [
+    {
+      "symbol": "EURUSD",
+      "provider": null
+    },
+    {
+      "symbol": "GBPUSD",
+      "provider": null
+    },
+    {
+      "symbol": "USDJPY",
+      "provider": null
+    },
+    {
+      "symbol": "XAUUSD",
+      "provider": null
+    },
+    {
+      "symbol": "XAGUSD",
+      "provider": null
+    },
+    {
+      "symbol": "WTI",
+      "provider": null
+    }
+  ],
+  "execution_enabled": false
+}
