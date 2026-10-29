@@ -30,11 +30,13 @@ jobs:
         run: python src/mexc_public.py --output data/crypto/latest.json
       - name: Analyze closed candles
         run: python src/crypto_analysis.py --input data/crypto/latest.json --output reports/crypto/latest.json
+      - name: Archive technical analysis
+        run: python src/archive_analysis.py --report reports/crypto/latest.json --history-dir data/history
       - name: Commit updated snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/crypto/latest.json reports/crypto/latest.json
+          git add data/crypto/latest.json reports/crypto/latest.json data/history/
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
