@@ -7,6 +7,7 @@ import math
 import pathlib
 import statistics
 import sys
+from market_structure import structure
 
 INTERVALS = ("15m", "1h", "4h")
 INTERVAL_MS = {"15m": 900000, "1h": 3600000, "4h": 14400000}
@@ -63,6 +64,7 @@ def analyze(candles, interval, now_ms):
         "ema50": round(e50, 8),
         "atr14": round(atr14, 8),
         "atr_pct": round(100 * atr14 / last, 4),
+        "market_structure": structure(candles, atr14),
         "support_20": round(support, 8),
         "resistance_20": round(resistance, 8),
         "last_candle_close_utc": dt.datetime.fromtimestamp(
@@ -89,7 +91,7 @@ def main():
         "source_path": args.input,
         "market": "spot",
         "provider": "MEXC Spot Public API",
-        "method": "EMA20/EMA50 + ATR14 + extremos das 20 velas anteriores",
+        "method": "EMA20/EMA50 + ATR14 + extremos 20 candles + pivôs confirmados + regime ATR",
         "execution_enabled": False,
         "disclaimer": "Análise descritiva, não é recomendação ou sinal de negociação.",
         "assets": {},
